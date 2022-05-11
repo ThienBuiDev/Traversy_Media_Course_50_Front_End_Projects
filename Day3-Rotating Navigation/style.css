@@ -53,8 +53,7 @@ img {
 .circle button {
 	position: absolute;
 	padding: 0;
-	/* top: 50%;
-	left: 50%; */
+
 	height: 100px;
 	background: transparent;
 	border: none;
@@ -67,7 +66,6 @@ img {
 }
 
 #open {
-	/* left: 60%; */
 	top: 75%;
 	left: 75%;
 	transform: translate(-50%, -50%);
@@ -76,9 +74,7 @@ img {
 }
 
 #close {
-	/* top: 60%;
-	transform: rotate(90deg);
-	transform-origin: top left; */
+
 
 	top: 75%;
 	left: 25%;
