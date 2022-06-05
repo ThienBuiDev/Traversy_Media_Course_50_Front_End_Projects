@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	transition: 0.6s linear;
+}
+
+body {
+	background-color: #eafbff;
+	background-image: linear-gradient(to bottom, #eafbff 0%, #eafbff 50%, #5290f9 50%, #5290f9 100%);
+
+	font-family: 'Roboto', sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	overflow: hidden;
+}
+
+#nav {
+	background-color: #fff;
+	padding: 20px;
+	width: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 3px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+#nav ul {
+	display: flex;
+	width: 0;
+	padding: 0;
+	list-style-type: none;
+}
+#nav ul li {
+	margin-right: 15px;
+	opacity: 0;
+}
+
+#nav ul li a {
+	text-decoration: none;
+	color: #000;
+}
+#nav ul li a:focus {
+	outline: none;
+}
+
+/* When the nav is active */
+
+#nav.active {
+	width: 300px;
+}
+#nav.active ul {
+	width: 100%;
+}
+#nav.active ul li {
+	opacity: 1;
+	transform: rotateY(360deg);
+}
+
+/* Button style */
+.icon {
+	background: #fff;
+	border: none;
+	outline: none;
+	display: flex;
+	height: 10px;
+	width: 10px;
+	cursor: pointer;
+	padding: 0;
+	position: relative;
+	height: 30px;
+	width: 30px;
+}
+
+.line {
+	background-color: #5290f9;
+	height: 2px;
+	width: 100%;
+	position: absolute;
+}
+
+.line1 {
+	top: 10px;
+}
+
+.line2 {
+	bottom: 10px;
+}
+
+.active .line1 {
+	transform: rotate(45deg) translateY(5.5px);
+}
+.active .line2 {
+	transform: rotate(-45deg) translateY(-5.5px);
+}
