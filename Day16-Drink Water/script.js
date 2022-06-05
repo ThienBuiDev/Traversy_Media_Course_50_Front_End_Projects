@@ -5,20 +5,17 @@ const remainedElement = document.querySelector('#remained')
 
 initialize()
 
-function fillToCup(lastCup) {
-	for (cup of smallCups) {
-		cup.classList.add('full')
-		if (cup == lastCup) {
-			return
-		}
-	}
-}
+// function fillToCup(lastCup) {
+// 	for (cup of smallCups) {
+// 		cup.classList.add('full')
+// 		if (cup == lastCup) {
+// 			return
+// 		}
+// 	}
+// }
 
 function fillLargeCup() {
-	let filledCup = 0
-	let percentage
-	smallCups.forEach((cup) => (filledCup += cup.classList.contains('full') ? 1 : 0))
-	percentage = (filledCup / smallCups.length) * 100
+	let percentage = (document.querySelectorAll('.cup-small.full').length / smallCups.length) * 100
 	percentageElement.innerText = `${percentage}%`
 
 	let total = 0
@@ -30,17 +27,24 @@ function fillLargeCup() {
 	percentageElement.style.height = `${percentage}%`
 }
 
-function emptyAllCups() {
-	smallCups.forEach((cup) => cup.classList.remove('full'))
-}
+// function emptyAllCups() {
+// 	smallCups.forEach((cup) => cup.classList.remove('full'))
+// }
 
 function initialize() {
 	fillLargeCup()
 
 	smallCups.forEach((cup, index) => {
-		cup.addEventListener('click', (cup2, index2) => {
-			emptyAllCups()
-			fillToCup(cup)
+		cup.addEventListener('click', () => {
+			if (cup.classList.contains('full') && (index == smallCups.length - 1 || !cup.nextElementSibling.classList.contains('full'))) {
+				cup.classList.remove('full')
+			} else {
+				smallCups.forEach((cup2, index2) => {
+					if (index2 <= index) {
+						cup2.classList.add('full')
+					} else cup2.classList.remove('full')
+				})
+			}
 			fillLargeCup()
 		})
 	})
