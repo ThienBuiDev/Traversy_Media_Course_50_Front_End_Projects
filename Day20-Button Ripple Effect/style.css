@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	overflow: hidden;
+	background-color: #000;
+}
+
+button {
+	background-color: #8a2be2;
+	outline: none;
+	border: 1px #8a2be2 solid;
+	color: #fff;
+	font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	padding: 20px 30px;
+	overflow: hidden;
+	margin: 10px 0;
+	position: relative;
+	cursor: pointer;
+}
+
+button .circle {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	background-color: #fff;
+	animation: ripple 1.2s;
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@keyframes ripple {
+	0% {
+		opacity: 0.6;
+		height: 100px;
+		width: 100px;
+	}
+	100% {
+		opacity: 0;
+		transform: scale(7);
+	}
+}
