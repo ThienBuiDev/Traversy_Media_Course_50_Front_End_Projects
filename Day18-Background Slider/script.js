@@ -1,6 +1,6 @@
 const leftArrow = document.getElementById('left')
 const rightArrow = document.getElementById('right')
-const slides = document.querySelector('.slide')
+const slide = document.querySelector('.slide')
 const backgroundUrls = [
 	'https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80',
 	'https://images.unsplash.com/photo-1511593358241-7eea1f3c84e5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1934&q=80',
@@ -11,7 +11,7 @@ const backgroundUrls = [
 let activeIndex = 0
 changeBackground()
 function changeBackground() {
-	document.body.style.backgroundImage = slides.style.backgroundImage = `url(${backgroundUrls[activeIndex]})`
+	document.body.style.backgroundImage = slide.style.backgroundImage = `url(${backgroundUrls[activeIndex]})`
 }
 
 leftArrow.onclick = () => {
