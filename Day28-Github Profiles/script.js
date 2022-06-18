@@ -33,11 +33,10 @@ function createUserCard(user) {
 	const cardHTML = `
     <div class="card">
     <div>
-      <img src="${user.avatar_url}" alt="${user.name}" class="avatar">
+      <img src="${user.avatar_url}" class="avatar" alt="${user.name}" >
     </div>
     <div class="user-info">
-      <h2>${userID}</h2>
-      ${userBio}
+      <h2>${userID}</h2>${userBio}
       <ul>
         <li>${user.followers} <strong>Followers</strong></li>
         <li>${user.following} <strong>Following</strong></li>
@@ -54,9 +53,7 @@ function createErrorCard(msg) {
 	const cardHTML = `
         <div class="card">
             <h1>${msg}</h1>
-        </div>
-    `
-
+        </div>`
 	main.innerHTML = cardHTML
 }
 
@@ -81,7 +78,6 @@ form.addEventListener('submit', (e) => {
 
 	if (user) {
 		getUser(user)
-
 		search.value = ''
 	}
 })

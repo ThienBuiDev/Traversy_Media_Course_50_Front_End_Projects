@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	overflow: hidden;
+	padding: 20px;
+}
+
+small {
+	display: block;
+	margin-bottom: 20px;
+}
+
+.heart {
+	color: red;
+}
+
+.love-me {
+	height: 440px;
+	width: 300px;
+	background: url('https://images.unsplash.com/photo-1504215680853-026ed2a45def?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80')
+		no-repeat center center/cover;
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+}
+
+.love-me .heart {
+	position: absolute;
+	animation: heart 0.6s linear forwards;
+	top: 50%;
+	left: 50%;
+	font-size: 50px;
+}
+
+@keyframes heart {
+	0% {
+		transform: translate(-50%, -50%) scale(1);
+		opacity: 1;
+	}
+
+	100% {
+		transform: translate(-50%, -50%) scale(0);
+		opacity: 0;
+	}
+}
