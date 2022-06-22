@@ -5,12 +5,6 @@
 	margin: 0;
 }
 
-input,
-button {
-	border: none;
-	outline: none;
-}
-
 body {
 	font-family: 'Roboto', sans-serif;
 	display: flex;
