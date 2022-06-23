@@ -11,15 +11,11 @@ button {
 	outline: none;
 }
 
-/* input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button {
 	opacity: 1;
-} */
-
-#length {
-	display: inline-block;
-	width: 200px;
 }
+
 body {
 	background-color: #3b3b98;
 	font-family: 'Roboto', sans-serif;

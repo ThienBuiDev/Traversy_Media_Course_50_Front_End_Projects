@@ -7,6 +7,17 @@ const symbolsElement = document.getElementById('symbols')
 const generateElement = document.getElementById('generate')
 const clipboardElement = document.getElementById('clipboard')
 
+clipboardElement.addEventListener('click', () => {
+	let textToCopy = resultElement.innerText
+	if (navigator.clipboard) {
+		navigator.clipboard.writeText(textToCopy).then(() => {
+			alert('Copied to clipboard')
+		})
+	} else {
+		console.log('Browser Not compatible')
+	}
+})
+
 generateElement.addEventListener('click', () => {
 	const length = +lengthElement.value
 	const lower = lowercaseElement.checked
