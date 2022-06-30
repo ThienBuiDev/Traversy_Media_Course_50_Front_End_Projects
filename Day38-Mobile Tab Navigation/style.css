@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+input,
+button {
+	border: none;
+	outline: none;
+}
+
+body {
+	background-color: rgba(154, 88, 181, 0.65);
+	font-family: 'Roboto', sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+.phone {
+	position: relative;
+	overflow: hidden;
+	border: 3px solid #eee;
+	border-radius: 15px;
+	height: 600px;
+	width: 340px;
+	background-color: #eee;
+}
+
+.phone .content {
+	opacity: 0;
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: calc(100% - 60px);
+	width: 100%;
+	transition: opacity 0.4s ease;
+}
+
+.phone .content.show {
+	opacity: 1;
+}
+
+nav {
+	position: absolute;
+	left: 0;
+	top: calc(100% - 60px);
+	height: 60px;
+	width: 100%;
+	padding: 0;
+}
+
+nav ul {
+	display: flex;
+	background-color: #fff;
+	height: 100%;
+	padding: 0;
+	list-style: none;
+	align-items: center;
+}
+
+nav ul li {
+	color: #777;
+	cursor: pointer;
+	flex: 1;
+	text-align: center;
+}
+
+nav ul li p {
+	font-size: 12px;
+	margin: 2px 0;
+}  
+
+nav ul li:hover,
+nav ul li.active {
+	color: #8e44ad;
+}
