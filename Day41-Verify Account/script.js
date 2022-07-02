@@ -8,7 +8,7 @@ codes.forEach((code, idx) => {
 		if (e.key >= 0 && e.key <= 9) {
 			e.preventDefault()
 			code.value = e.key
-			idx <= codes.length - 1 ? codes[idx + 1].focus() : code.blur()
+			idx < codes.length - 1 ? codes[idx + 1].focus() : code.blur()
 		} else if (e.keyCode == 39) {
 			idx <= codes.length - 1 && codes[idx + 1].focus()
 		} else if (e.keyCode == 37) {
